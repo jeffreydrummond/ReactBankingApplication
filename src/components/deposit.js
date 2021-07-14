@@ -50,7 +50,10 @@ function Deposit() {
     function handleDeposit() {
 
         if (!validate(transactionAmount, 'transactionAmount')) return;
-        ctx.handleTransaction('deposit', transactionAmount);
+        ctx.handleTransaction('Deposit', transactionAmount);
+
+        setStatus('Deposit of $' + transactionAmount + ' successfully completed!');
+        setTimeout(() => setStatus(''), 2000);
     }
 
     return (

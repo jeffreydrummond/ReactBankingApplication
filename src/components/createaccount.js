@@ -84,7 +84,6 @@ function CreateAccount() {
                             <div>8 characters or more</div><br />
                     <button type="submit" className="btn btn-light" id="btnCreateAccount"
                         disabled={disableButton} onClick={handleCreate}>Create Account</button>
-
                 </>
 
             ) : (
@@ -93,6 +92,7 @@ function CreateAccount() {
                     <h5>Success</h5>
                     <button type="submit" className="btn btn-light" id="btnAddAnotherAccount"
                         onClick={clearForm}>Add another account</button>
+
 
                 </>
             )

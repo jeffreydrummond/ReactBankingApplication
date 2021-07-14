@@ -34,9 +34,9 @@ function Spa() {
     let prevBalance = loggedInUser?.balance ?? 0;
     let newBalance = 0;
 
-    if(transactionType === 'deposit') {
+    if(transactionType === 'Deposit') {
       newBalance = (Number(prevBalance) + Number(transactionAmount));
-    }else if (transactionType === 'withdraw') {
+    }else if (transactionType === 'Withdrawal') {
       newBalance = (Number(prevBalance) - Number(transactionAmount));
     }
     
@@ -45,7 +45,8 @@ function Spa() {
     loggedInUser.balance = newBalance;
 
     // log event
-    let eventDate = new Date().toISOString().slice(0, 10);
+    let eventDate = new Date().toLocaleString();
+
     
     function Event(date, type, amount, balance, user) { 
       return { date: date, type: type,  amount: amount, balance: balance, user: user} 

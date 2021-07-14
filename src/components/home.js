@@ -6,7 +6,7 @@ import { Image } from 'react-bootstrap';
 function Home() {
     return (
 <div>
-<Card className="text-left">
+<Card className="text-center">
       <Card.Body>
         <Card.Title>
           <h4>For all your banking needs</h4>

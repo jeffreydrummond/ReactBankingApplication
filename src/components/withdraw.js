@@ -47,7 +47,10 @@ function Withdraw() {
     function handleWithdrawal() {
         if (!validate(transactionAmount, 'transactionAmount')) return;
         if ((loggedInUserBalance - transactionAmount) < 0) return;
-        ctx.handleTransaction('withdraw', transactionAmount);
+        ctx.handleTransaction('Withdrawal', transactionAmount);
+
+        setStatus('Withdrawal of $' + transactionAmount + ' successfully completed!');
+        setTimeout(() => setStatus(''), 2000);
     }
 
     function clearForm() {

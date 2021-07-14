@@ -51,7 +51,7 @@ function Login({ triggerLogin }) {
             history.push('/')
             
             // log event
-            let eventDate = new Date().toISOString().slice(0, 10);
+            let eventDate = new Date().toLocaleString();
             
             function Event(date, type, amount, balance, user) { 
                 return { date: date, type: type,  amount: amount, balance: balance, user: user} 
